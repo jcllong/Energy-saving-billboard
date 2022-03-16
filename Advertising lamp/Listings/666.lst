@@ -1,0 +1,78 @@
+C51 COMPILER V9.59.0.0   666                                                               05/16/2021 11:11:26 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE 666
+OBJECT MODULE PLACED IN .\Objects\666.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 666.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\666.l
+                    -st) TABS(2) OBJECT(.\Objects\666.obj)
+
+line level    source
+
+*** WARNING C500 IN LINE 1 OF 666.c: LICENSE ERROR (R207(3): REGISTRY READ ERROR)
+
+   1          #include<reg51.h>
+   2          sbit P00=P0^0;sbit P01=P0^1;sbit P02=P0^2;sbit P03=P0^3;sbit P04=P0^4;sbit P05=P0^5;sbit P06=P0^6;
+   3          sbit P10=P1^0;sbit P11=P1^1;sbit P12=P1^2;sbit P13=P1^3;sbit P14=P1^4;sbit P15=P1^5;sbit P16=P1^6;
+   4          sbit P20=P2^0;sbit P21=P2^1;sbit P22=P2^2;sbit P23=P2^3;sbit P24=P2^4;sbit P25=P2^5;sbit P26=P2^6;
+   5          sbit P30=P3^0;sbit P31=P3^1;sbit P32=P3^2;sbit P33=P3^3;sbit P34=P3^4;sbit P35=P3^5;sbit P36=P3^6;
+   6          sbit P17=P1^7;sbit P07=P0^7;sbit P27=P2^7;sbit P37=P3^7;
+   7          void delayms();//paomadeng
+   8          void main()
+   9          {
+  10   1        while(2)
+  11   1        {
+  12   2      //    unsigned char light1=0x01,light2=0x01,light3=0x01,light4=0x01;
+  13   2      //    P10=0;P14=0;P33=0;P37=0;P00=0;P04=0;P20=0;P24=0;delayms();//模式行行灯
+  14   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  15   2      //    P11=0;P15=0;P32=0;P36=0;P01=0;P05=0;P21=0;P25=0;delayms();
+  16   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  17   2      //    P12=0;P16=0;P31=0;P35=0;P02=0;P06=0;P22=0;P26=0;delayms();
+  18   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  19   2      //    P13=0;P17=0;P30=0;P34=0;P03=0;P07=0;P23=0;P27=0;delayms();
+  20   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  21   2      //    P13=0;P17=0;P30=0;P34=0;P03=0;P07=0;P27=0;P23=0;delayms();//模式交叉灯
+  22   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  23   2      //    P14=0;P15=0;P16=0;P17=0;P30=0;P31=0;P32=0;P33=0;P04=0;P05=0;P06=0;P07=0;P27=0;P26=0;P25=0;P24=0;delaym
+             -s();
+  24   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  25   2      //    P10=P11=P12=P13=P17=P30=P34=P35=P36=P37=0;P00=P01=P02=P03=P07=P27=P23=P22=P21=P20=0;delayms();
+  26   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  27   2      //    P13=0;delayms();P13=1;delayms();//区域灯
+  28   2      //    P1=0X00;delayms();P1=~0X00;delayms();
+  29   2      //    P1=0X00;P3=0X00;delayms();P1=~0X00;P3=~0X00;delayms();
+  30   2      //    P1=0X00;P0=0X00;P2=0X00;P3=0X00;delayms();P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  31   2      //    P13=0;delayms();P12=0;delayms();P11=0;delayms();P10=0;delayms();//模式蛇形灯
+  32   2      //    P00=0;delayms();P01=0;delayms();P02=0;delayms();P03=0;delayms();  
+  33   2      //    P07=0;delayms();P06=0;delayms();P05=0;delayms();P04=0;delayms();
+  34   2      //    P14=0;delayms();P15=0;delayms();P16=0;delayms();P17=0;delayms();
+  35   2      //    P30=0;delayms();P31=0;delayms();P32=0;delayms();P33=0;delayms();
+  36   2      //    P24=0;delayms();P25=0;delayms();P26=0;delayms();P27=0;delayms();
+  37   2      //    P23=0;delayms();P22=0;delayms();P21=0;delayms();P20=0;delayms();
+  38   2      //    P37=0;delayms();P36=0;delayms();P35=0;delayms();P34=0;delayms();    
+  39   2      //    P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  40   2            P1=~0X00;P0=~0X00;P2=~0X00;P3=~0X00;delayms();
+  41   2        }
+  42   1      }
+  43          
+  44          void delayms()
+  45          {
+  46   1        unsigned int i,j;
+  47   1        for(i=0;i<600;i++)
+  48   1          for(j=0;j<100;j++);
+  49   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.59.0.0   666                                                               05/16/2021 11:11:26 PAGE 2   
+
+   CODE SIZE        =     46    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

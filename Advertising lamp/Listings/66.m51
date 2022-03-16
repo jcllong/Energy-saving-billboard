@@ -1,0 +1,91 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    05/16/2021  11:11:28  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\666.obj TO .\Objects\66 PRINT (.\Listings\66.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\666.obj (666)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\66 (666)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001DH     UNIT         ?PR?DELAYMS?666
+            CODE    081DH     0011H     UNIT         ?PR?MAIN?666
+            CODE    082EH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\66 (666)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?666
+
+?PR?MAIN?666
+  +--> ?PR?DELAYMS?666
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\66 (666)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        666
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:081DH         PUBLIC        main
+  C:0800H         PUBLIC        delayms
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  05/16/2021  11:11:28  PAGE 2
+
+
+  -------         PROC          MAIN
+  C:081DH         LINE#         8
+  C:081DH         LINE#         9
+  C:081DH         LINE#         10
+  C:081DH         LINE#         11
+  C:081DH         LINE#         40
+  C:082CH         LINE#         41
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAYMS
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0800H         LINE#         44
+  C:0800H         LINE#         45
+  C:0800H         LINE#         47
+  C:0803H         LINE#         48
+  C:081CH         LINE#         49
+  -------         ENDPROC       DELAYMS
+  -------         ENDMOD        666
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002EH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=61
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
